@@ -7,7 +7,8 @@ import Portfolio from "./components/Portfolio";
 import Timeline from "./components/Timeline";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+// importing your CV
+import pdf from "./assets/pdf/CV.pdf";
 function App() {
   // dark mode stats and code for dark mode
   const [theme, setTheme] = useState(null);
@@ -65,16 +66,34 @@ function App() {
       />
     </svg>
   );
+  // CV button
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = pdf;
+    link.download = "CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
-    <>
-      <button
-        type="button"
-        onClick={handleThemeSwitch}
-        className="fixed p-2 z-10 right-20 top-4 bg-stone-900 dark:bg-stone-200 text-lg rounded-md"
-      >
-        {theme === "dark" ? sun : moon}
-      </button>
+    <div className="bg-white dark:bg-stone-900">
+      <div className="flex justify-between p-2 md:p-0">
+        <button
+          type="button"
+          onClick={handleThemeSwitch}
+          className="p-2 z-10 bg-stone-900 dark:bg-stone-200 text-lg rounded-md md:fixed md:right-8 right-2 top-4"
+        >
+          {theme === "dark" ? sun : moon}
+        </button>
+        <button
+          type="button"
+          onClick={handleDownloadCV}
+          className="p-2 z-10 bg-stone-900 dark:bg-stone-200 text-lg text-white dark:text-stone-900 rounded-md md:fixed  left-8 top-4"
+        >
+          CV
+        </button>
+      </div>
       <div
         className="bg-white
      min-h-screen  mx-auto dark:bg-stone-900 text-stone-900 dark:text-stone-300"
@@ -87,7 +106,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
