@@ -32,7 +32,12 @@ This is a minimal template for the students in the Joy of Coding to take modify 
    
 2) When you replace the cv.pdf file make sure you update the import statement and change the necessary parts of the path to the file in the App.jsx file.
 
-!important 
-when you want to run build and preview PLEASE remember not to push to production without making sure you have removed 'src' from the relative path if you will use it in the 'data' folders with the 'portfolio.js' or 'timeline.js'
+**How do I change the favicon?
 
-This is something I don't fully understand in Vite there may be a work around but I don't know
+- Replace the favicon.ico file in the public folder with your own favicon.
+
+**How do I change the title of the page?
+
+- Open the index.html file in the public folder and change the title tag to whatever you want.
+
+**Please Note that the only way you can use images is if its in the Public folder. If you want to use images in the src folder you will need to import them and then use them as a component.
