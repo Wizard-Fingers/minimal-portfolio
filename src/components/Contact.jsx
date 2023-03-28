@@ -14,7 +14,9 @@ export default function Contact() {
           method="POST"
           className="flex flex-col w-full md:w-1/2"
         >
+        <div className="mt-2">
           <Title>Contact</Title>
+          </div>
           <input
             type="text"
             name="name"

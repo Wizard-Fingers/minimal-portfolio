@@ -1,9 +1,10 @@
 export default function PortfolioItem({ title, imgUrl, stack, link, text }) {
   return (
-    <div className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden max-w-lg">
+    <div className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden max-w-md my-4">
       <img
         src={imgUrl}
         alt="portfolio"
+        // adjust the image parameters here once you updated the image in the data folder in the portfolio.js file
         className="w-full h-36 md:h-48 object-cover cursor-pointer"
       />
       <div className="w-full p-4">

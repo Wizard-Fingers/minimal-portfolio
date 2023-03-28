@@ -2,13 +2,16 @@ import React from "react";
 // useEffect hook for dark mode
 import { useEffect, useState } from "react";
 // components imported
-import Intro from "./components/intro";
-import Portfolio from "./components/Portfolio";
-import Timeline from "./components/Timeline";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Intro from "./components/intro.jsx";
+import Portfolio from "./components/Portfolio.jsx";
+import Timeline from "./components/Timeline.jsx";
+import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
+import Review from "./components/Review.jsx";
 // importing your CV
-import pdf from "./assets/pdf/CV.pdf";
+import pdf from "/assets/pdf/CV.pdf";
+//importing your profile picture (if you want one)
+import profile from "/assets/main-pic.png";
 function App() {
   // dark mode stats and code for dark mode
   const [theme, setTheme] = useState(null);
@@ -35,7 +38,7 @@ function App() {
 
   const sun = (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.owwg/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
@@ -78,18 +81,18 @@ function App() {
 
   return (
     <div className="bg-white dark:bg-stone-900">
-      <div className="flex justify-between p-2 md:p-0">
+      <div className="flex justify-between p-2 ">
         <button
           type="button"
           onClick={handleThemeSwitch}
-          className="p-2 z-10 bg-stone-900 dark:bg-stone-200 text-lg rounded-md md:fixed md:right-8 right-2 top-4"
+          className="p-2 z-10 bg-stone-900 dark:bg-stone-200 text-lg rounded-md md:fixed md:right-8 right-2 top-4 w-8 h-8 flex justify-center items-center"
         >
           {theme === "dark" ? sun : moon}
         </button>
         <button
           type="button"
           onClick={handleDownloadCV}
-          className="p-2 z-10 bg-stone-900 dark:bg-stone-200 text-lg text-white dark:text-stone-900 rounded-md md:fixed  left-8 top-4"
+          className="pt-[1px] z-10 bg-stone-900 dark:bg-stone-200 text-white dark:text-stone-900 rounded-md md:fixed md:left-8 left-2 top-4 w-8 h-8 flex justify-center items-center text-sm "
         >
           CV
         </button>
@@ -98,10 +101,19 @@ function App() {
         className="bg-white
      min-h-screen  mx-auto dark:bg-stone-900 text-stone-900 dark:text-stone-300"
       >
-        <div className="max-w-5xl w-11/12 mx-auto">
-          <Intro />
-          <Portfolio />
+        <div className="max-w-5xl w-11/12 mx-auto ">
+          {/*profile picture placement*/}
+          <div className="flex justify-center">
+            <img
+              src={profile}
+              alt="profile"
+              className="w-32 h-32 rounded-full object-cover mt-8 dark:bg-white"
+            />
+          </div>
+          <Intro />  
           <Timeline />
+          <Portfolio />
+          <Review />
           <Contact />
           <Footer />
         </div>
