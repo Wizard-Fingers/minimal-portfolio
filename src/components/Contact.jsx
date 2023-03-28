@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "./Title.jsx";
 // added axios to handle form submission
 import axios from "axios";
 
 export default function Contact() {
+  // add state to handle form data
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   // add event listener to form
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -14,11 +20,17 @@ export default function Contact() {
         formData
       );
       console.log(response); // log the response for debugging purposes
+      setFormData({ name: "", email: "", message: "" }); // reset form data to empty strings
       // show a success message to the user
     } catch (error) {
       console.error(error); // log the error for debugging purposes
       // show an error message to the user
     }
+  };
+  // add state to handle form data and update it on change
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
   };
   return (
     <div className="flex flex-col mb-10 mx-auto">
@@ -36,18 +48,24 @@ export default function Contact() {
             name="name"
             placeholder="Name"
             className="border-2 border-stone-900 dark:border-white rounded-md p-2 my-2 focus:outline-none bg-transparent"
+            value={formData.name}
+            onChange={handleChange}
           />
           <input
             type="text"
             name="email"
             placeholder="Email"
             className="my-2 border-stone-900 dark:border-white border-2 rounded-md p-2 focus:outline-none bg-transparent"
+            value={formData.email}
+            onChange={handleChange}
           />
           <textarea
             name="message"
             placeholder="Message"
             rows="10"
             className="p-2 mb-4 border-stone-900 dark:border-white bg-transparent border-2 rounded-md focus:outline-none"
+            value={formData.message}
+            onChange={handleChange}
           />
           <button
             type="submit"
