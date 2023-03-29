@@ -1,6 +1,4 @@
-import React from "react";
-// useEffect hook for dark mode
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 // components imported
 import Intro from "./components/intro.jsx";
 import Portfolio from "./components/Portfolio.jsx";
@@ -81,21 +79,25 @@ function App() {
 
   return (
     <div className="bg-white dark:bg-stone-900">
-      <div className="flex justify-between p-2 ">
-        <button
-          type="button"
-          onClick={handleThemeSwitch}
-          className="p-2 z-10 bg-stone-900 dark:bg-stone-200 text-lg rounded-md md:fixed md:right-8 right-2 top-4 w-8 h-8 flex justify-center items-center"
-        >
-          {theme === "dark" ? sun : moon}
-        </button>
-        <button
-          type="button"
-          onClick={handleDownloadCV}
-          className="pt-[1px] z-10 bg-stone-900 dark:bg-stone-200 text-white dark:text-stone-900 rounded-md md:fixed md:left-8 left-2 top-4 w-8 h-8 flex justify-center items-center text-sm "
-        >
-          CV
-        </button>
+      <div className="flex justify-between p-2 md:sticky md:top-0">
+        <div className="flex">
+          <button
+            type="button"
+            onClick={handleDownloadCV}
+            className="pt-[1px]  bg-stone-900 dark:bg-stone-200 text-white dark:text-stone-900 rounded-md w-8 h-8 flex justify-center items-center text-sm "
+          >
+            CV
+          </button>
+        </div>
+        <div className="flex">
+          <button
+            type="button"
+            onClick={handleThemeSwitch}
+            className="p-2  bg-stone-900 dark:bg-stone-200 text-lg rounded-md  w-8 h-8 flex justify-center items-center "
+          >
+            {theme === "dark" ? sun : moon}
+          </button>
+        </div>
       </div>
       <div
         className="bg-white
