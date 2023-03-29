@@ -17,7 +17,7 @@ export default function PortfolioItem({ title, imgUrl, stack, link, text }) {
             target="_blank"
             rel="noopener noreferrer"
             href={link}
-            className=" text-center inline-block px-10 py-2 w-max text-base font-medium rounded-md text-stone-900 bg-gradient-to-r from-stone-500 to-gray-200 drop-shadow-md hover:from-stone-600 hover:to-gray-300 hover:text-white"
+            className=" text-center inline-block px-10 py-2 w-max text-base font-medium rounded-md text-stone-900 bg-gradient-to-r from-stone-500 to-gray-200 drop-shadow-md hover:from-stone-600 hover:to-gray-300 hover:text-white "
           >
             have a look
           </a>

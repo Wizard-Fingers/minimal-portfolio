@@ -26,6 +26,8 @@ This is a minimal template for the students in the Joy of Coding to take modify 
    
 4) You will see I already added the import.meta.env.VITE_APP_FORM_URL to the contact.js file. This is how you access the environment variable in the code and you should receive an email when you submit the form.
 
+5) I added validation already and I added a message to indicate that the form was submitted successfully. You can change the message in the contact.js file. along with styling the form if you want.
+
 **How do I put my CV on the download button?
 
 1) Replace the cv.pdf file in the assets folder with your own cv.

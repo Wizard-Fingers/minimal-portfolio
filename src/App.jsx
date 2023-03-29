@@ -110,7 +110,7 @@ function App() {
               className="w-32 h-32 rounded-full object-cover mt-8 dark:bg-white"
             />
           </div>
-          <Intro />  
+          <Intro />
           <Timeline />
           <Portfolio />
           <Review />
