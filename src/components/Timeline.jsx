@@ -14,7 +14,6 @@ export default function Timeline() {
           <TimelineItem
             year={item.year}
             title={item.title}
-            duration={item.duration}
             details={item.details}
           />
         ))}

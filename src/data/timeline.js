@@ -1,30 +1,26 @@
 export default [
   {
-    year: "tomorrow",
-    title: "under construction",
-    duration: "1year",
+    year: "2021",
+    title: "Discoverd Coding and Began Education",
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+      "Through a love for film and desire to delve into effects for a film, I discovered the world of programming and became obsessed."
   },
   {
-    year: "today",
-    title: "under construction",
-    duration: "2year",
+    year: "2022",
+    title: "Front End Development",
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+      "After digging into Python, C++, and others, I discoverd the actual creation of websites, and all the possibilities with this skill set.",
   },
   {
-    year: "yesterday",
-    title: "under construction",
-    duration: "3year",
+    year: "2023",
+    title: "Freelance",
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+      "After applying myself for a year, while also maintaining a family, I began the desire to actually begin work. From there my projects were created, and my skill set began to grow.",
   },
   {
-    year: "1995",
-    title: "wrote my first line of code",
-    duration: "27 years ago",
+    year: "2024",
+    title: "Mentor",
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-  },
-];
+      "As my skills had progressed, I began to search for a mentor where I met Art Beckett. Since that day we've begun daily conversations and ways to grow my skillset even further.",
+  }
+    ];

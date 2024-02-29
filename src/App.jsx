@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // components imported
-import Intro from "./components/intro.jsx";
+import Intro from "./components/Intro.jsx";
 import Portfolio from "./components/Portfolio.jsx";
 import Timeline from "./components/Timeline.jsx";
 import Contact from "./components/Contact.jsx";
@@ -9,7 +9,7 @@ import Review from "./components/Review.jsx";
 // importing your CV
 import pdf from "/assets/pdf/CV.pdf";
 //importing your profile picture (if you want one)
-import profile from "/assets/main-pic.png";
+import profile from "/public/assets/me.jpg";
 function App() {
   // dark mode stats and code for dark mode
   const [theme, setTheme] = useState(null);

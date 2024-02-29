@@ -6,7 +6,7 @@ export default function Footer() {
       <hr className="mb-4" />
       {/* add some Icons here for yourself */}
       <p className="text-sm mt-2 opacity-50 dark:text-white">
-        &copy; {new Date().getFullYear()} - Made with ❤️ by Art Beckett
+        &copy; {new Date().getFullYear()} - Josh Rabalais
       </p>
     </div>
   );
